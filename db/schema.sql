@@ -26,3 +26,14 @@ CREATE TABLE reviews (
  product_id INTEGER REFERENCES products (id)
  ON DELETE CASCADE
 );
+
+DROP TABLE IF EXISTS user_test;
+
+CREATE TABLE user_test (
+ id SERIAL PRIMARY KEY,
+ user_name VARCHAR(255) NOT NULL,
+ email VARCHAR(255) NOT NULL,
+ password VARCHAR(255) NOT NULL,
+ product_id INTEGER REFERENCES products (id)
+ ON DELETE CASCADE
+);

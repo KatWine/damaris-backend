@@ -5,7 +5,7 @@ const reviews = express.Router({ mergeParams: true }); // mergeParams is needed 
 const {
   getAllReviews,
   getReview,
-  createReview,
+  newReview,
   deleteReview,
   updateReview,
 } = require("../queries/reviews");
@@ -44,7 +44,7 @@ reviews.get("/:id", async (req, res) => {
 reviews.post("/", async (req, res) => {
   const { product_id } = req.params;
   try {
-    const review = await createReview(product_id, req.body);
+    const review = await newReview({product_id, ...req.body});
     res.json(review);
   } catch (error) {
     res.status(400).json({ error: error });

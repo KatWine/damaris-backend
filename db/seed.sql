@@ -24,3 +24,9 @@ VALUES
 ('2', 'Alison', 'Fantastic Soap!', 'Left my skin cleaner than I ever imagined possible!', 5),
 ('3', 'Hannah', 'Just Okay', 'Not bad, but I have used better soaps.', 3),
 ('3', 'Gabi', 'Nice Soap', 'Good soap, but a bit expensive for what it is.', 4);
+
+
+INSERT INTO user_test (user_name, email,password)
+VALUES
+
+('Joshua M', 'JMelson@yahoo.com','MkUltra234',)
